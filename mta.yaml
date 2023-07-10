@@ -19,7 +19,7 @@ modules:
     provides:
       - name: srv_api
         properties:
-          url: '${default-url}'
+          url: "${default-url}"
     requires:
       - name: cloud-sample-spaceflight-node-hdi-container
   - name: ui
@@ -37,19 +37,19 @@ modules:
         group: destinations
         properties:
           name: backend
-          url: '~{url}'
+          url: "~{url}"
           forwardAuthToken: true
 resources:
   - name: cloud-sample-spaceflight-node-hdi-container
     properties:
-      hdi-container-name: '${service-name}'
+      hdi-container-name: "${service-name}"
     type: com.sap.xs.hdi-container
   - name: cloud-sample-spaceflight-node-uaa
     type: com.sap.xs.uaa
     parameters:
       service-plan: application
       config:
-        xsappname: 'cloud-sample-spaceflight-node-${org}-${space}'
+        xsappname: "cloud-sample-spaceflight-node-${org}-${space}"
         tenant-mode: dedicated
         scopes:
           - name: $XSAPPNAME.Show
