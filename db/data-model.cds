@@ -1,6 +1,7 @@
 namespace teched.payment.trip;
 
 using teched.flight.trip as flight from 'spaceflight-model/db/flight-model';
+using teched.flight.trip as zflight from 'spaceflight-model/db/flight-model';
 using teched.space.trip as space from 'spaceflight-model/db/space-model';
 
 entity PaymentInfo {
